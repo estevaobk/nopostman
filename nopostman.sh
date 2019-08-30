@@ -4,7 +4,7 @@
 
 USERNAME="rh-sso-user"
 
-PASSWORD="rhs-so-password"
+PASSWORD="rhs-sso-password"
 
 REALM="rh-sso-realm"
 

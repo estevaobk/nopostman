@@ -20,7 +20,7 @@ clear
 
 RHSSO="${RHSSO_HOST}/auth/realms/${REALM}/protocol/openid-connect/token"
 
-export TKN=$(curl -k -X POST -H "Content-Type: application/x-www-form-urlencoded" -d "username=${USERNAME}" -d "password=${PASSWORD}" -d "grant_type=password" -d "client_id=${1}" -d "client_secret=${2}" ${RHSSO} 2> /dev/null)
+TKN=$(curl -k -X POST -H "Content-Type: application/x-www-form-urlencoded" -d "username=${USERNAME}" -d "password=${PASSWORD}" -d "grant_type=password" -d "client_id=${1}" -d "client_secret=${2}" ${RHSSO} 2> /dev/null)
 
 echo -e "\nRH SSO: ${RHSSO}\n\nToken: ${TKN}\n"
 
